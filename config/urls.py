@@ -27,17 +27,27 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from django.http import JsonResponse
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from drf_yasg.openapi import SecurityScheme
 
 schema_view = get_schema_view(
    openapi.Info(
       title="Connos Park API",
       default_version='v1',
       description="Documentación interactiva de la API REST para el sistema de administración de Connos Park.",
-      contact=openapi.Contact(email="tucorreo@ejemplo.com"),
+      contact=openapi.Contact(email="connospark@connospark.com"),
       license=openapi.License(name="BSD License"),
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
+   authentication_classes=(JWTAuthentication, ),
+   security_definitions={
+        'Bearer': SecurityScheme(
+            type=openapi.TYPE_HTTP,
+            scheme='bearer',
+            bearer_format='JWT'
+        )
+    }
 )
 
 urlpatterns = [
