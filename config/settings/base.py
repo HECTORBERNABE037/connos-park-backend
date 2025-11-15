@@ -89,6 +89,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Modelo de usuario personalizado
 AUTH_USER_MODEL = 'usuarios.Usuario'
 
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+            'description': 'JWT Authorization header using the Bearer scheme. Ejemplo: "Bearer {token}"',
+        }
+    },
+}
 
 # Django REST Framework
 REST_FRAMEWORK = {

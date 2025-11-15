@@ -42,10 +42,15 @@ schema_view = get_schema_view(
    permission_classes=(permissions.AllowAny,),
    authentication_classes=(JWTAuthentication, ),
 )
+# swagger_schema = openapi.SecurityScheme(
+#     type=openapi.TYPE_HTTP,
+#     scheme='bearer',
+#     bearer_format='JWT',
+# )
 
 urlpatterns = [
     path('', lambda request: JsonResponse({'ok': True})),
-    #path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('api/', include('apps.usuarios.urls')), 
     path('api/', include('apps.clientes.urls')),
     path('api/', include('apps.contratos.urls')),
