@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'drf_yasg',
-    'corsheaders',
     
     # Apps del proyecto CONNOS Park
     'apps.usuarios',
