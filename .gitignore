@@ -1,2 +1,3 @@
-"media/\nvenv/\n__pycache__/\n*.pyc\ndb.sqlite3" 
-/staticfiles
+"media/\nvenv/\n__pycache__/\n*.pyc\ndb.sqlite3"
+ /staticfiles
+
