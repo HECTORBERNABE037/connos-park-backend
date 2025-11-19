@@ -4,6 +4,7 @@ Configuraciones compartidas entre todos los entornos
 """
 from pathlib import Path
 from datetime import timedelta
+import os
 
 # Build paths - parent.parent.parent porque settings está 3 niveles abajo
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -80,7 +81,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
