@@ -21,4 +21,5 @@ except ImportError:
 
 CORS_ALLOWED_ORIGINS = [
     "https://connos-park-frontend.herokuapp.com",
+    "http://localhost:5173",
 ]
