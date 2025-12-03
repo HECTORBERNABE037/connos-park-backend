@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.exceptions import ValidationError
+# Ya no necesitas importar ValidationError si no vas a validar nada extra aquí
 
 class Cajon(models.Model):
     """Espacios físicos de estacionamiento"""
@@ -16,16 +16,8 @@ class Cajon(models.Model):
     )
     descripcion = models.TextField(blank=True)
     
-    def clean(self):
-        super().clean()
-        if self.numero is not None:
-            try:
-                # Forzar a entero para la comparación, sea cual sea la fuente
-                numero = int(self.numero)
-            except (TypeError, ValueError):
-                raise ValidationError({'numero': 'El número del cajón debe ser un número entero válido.'})
-            if numero <= 0:
-                raise ValidationError({'numero': 'El número del cajón debe ser mayor que cero.'})
+    # ELIMINAMOS el método clean() o lo dejamos vacío si no hay más reglas
+    # Django ya valida automáticamente que 'numero' no se repita (unique=True) y que no exceda 10 caracteres.
 
     class Meta:
         db_table = 'tbl_cajones'
