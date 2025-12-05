@@ -57,6 +57,7 @@ urlpatterns = [
     path('api/', include('apps.pagos.urls')),
     path('api/', include('apps.operaciones.urls')),
     path('api/', include('apps.reportes.urls')),
+    path('api/', include('apps.avisos.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
