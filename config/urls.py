@@ -47,7 +47,7 @@ schema_view = get_schema_view(
 #     type=openapi.TYPE_HTTP,
 #     scheme='bearer',
 #     bearer_format='JWT',
-# )
+# ) no necesario
 
 urlpatterns = [
     path('', lambda request: JsonResponse({'ok': True})),
