@@ -2,7 +2,7 @@ from .base import *
 import os
 
 INSTALLED_APPS += ["whitenoise.runserver_nostatic"]
-MIDDLEWARE = ["whitenoise.middleware.WhiteNoiseMiddleware"] + MIDDLEWARE
+#MIDDLEWARE = ["whitenoise.middleware.WhiteNoiseMiddleware"] + MIDDLEWARE
 
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1", "localhost"]
