@@ -1,7 +1,7 @@
 from .base import *
 import os
 
-INSTALLED_APPS += ["whitenoise.runserver_nostatic"]
+#INSTALLED_APPS += ["whitenoise.runserver_nostatic"]
 #MIDDLEWARE = ["whitenoise.middleware.WhiteNoiseMiddleware"] + MIDDLEWARE
 
 DEBUG = os.environ.get("DEBUG", "False") == "True"
