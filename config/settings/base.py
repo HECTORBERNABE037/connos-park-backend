@@ -9,7 +9,7 @@ import os
 # Build paths - parent.parent.parent porque settings está 3 niveles abajo
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-#SECRET_KEY = 'django-insecure-pdnjmwy#24kfu%5!h6&kv&vvqc23ic8ck&lcbo@y(hcbjku-0v'
+SECRET_KEY = 'django-insecure-pdnjmwy#24kfu%5!h6&kv&vvqc23ic8ck&lcbo@y(hcbjku-0v'
 
 
 # Application definition
