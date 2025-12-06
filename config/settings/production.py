@@ -20,6 +20,6 @@ except ImportError:
     pass
 
 CORS_ALLOWED_ORIGINS = [
-    "https://connos-park-frontend.herokuapp.com",
+    "https://connos-park-frontend-f06e850ec093.herokuapp.com",
     "http://localhost:5173",
 ]
