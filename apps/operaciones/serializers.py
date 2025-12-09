@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Cajon
 
 class CajonSerializer(serializers.ModelSerializer):
-    # ELIMINAMOS def validate_numero(...) por completo.
+    ocupado = serializers.ReadOnlyField()
     
     class Meta:
         model = Cajon
